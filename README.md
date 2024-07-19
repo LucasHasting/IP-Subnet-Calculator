@@ -7,6 +7,7 @@ This program works as a subnet calculator simular to the website [here](https://
 - [Installation](#installation)
 - [Usage](#usage)
 - [Example](#example)
+- [Program-Overview](#program-overview)
 
 ## Installation
 
@@ -46,3 +47,7 @@ The program asks the user to enter an IP address and subnet mask in dotted decim
 ## Example
 
 For an example of how to use the program, see the video here (to be posted in the future).
+
+## Program-Overview
+
+The subnetting.py files contains the main driver of the program and is what needs to be executed, the functions_and_constants.py file contains the constants used in both programs and the functions used in subnetting.py
