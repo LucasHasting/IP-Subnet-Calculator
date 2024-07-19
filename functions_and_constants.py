@@ -8,6 +8,7 @@ MAX_SUBNET = 254
 MAX_ADDRESS = 255
 LAST_DOTTED_DECIMAL_POSITION = 3
 END_OF_STR_SHIFT = 1
+STAR_AMOUNT = 68
 SUBNET_POSSIBILITIES = [128, 192, 224, 240, 248, 252, 254, 255]
 
 '''
@@ -59,12 +60,12 @@ Name:         valid_subnet
 Description:  takes in a subnet address in list form and validates the address
 '''
 def valid_subnet(subnet):
-    cond = subnet[LAST_DOTTED_DECIMAL_POSITION] >= MAX_SUBNET or not all(x in SUBNET_POSSIBILITIES for x in subnet) 
-    return cond or all(x > MAX_ADDRESS for x in subnet)
+    return not all(x in SUBNET_POSSIBILITIES for x in subnet) 
+    
 
 '''
 Name:         valid_ip
 Description:  takes in a IP address in list form and validates the address
 '''
 def valid_ip(ip):
-    return all(x > MAX_ADDRESS for x in ip)
+    return not all(x < MAX_ADDRESS for x in ip)
