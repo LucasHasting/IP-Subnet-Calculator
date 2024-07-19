@@ -34,12 +34,12 @@ def main():
         network_address = ip_address & subnet_mask
         
         #calculate usable range and broadcast address
-        range_usable = THIRTY_TWO_BITS - subnet_mask - 1
-        broadcast_address = network_address + range_usable + 1
+        range_usable = (subnet_mask ^ THIRTY_TWO_BITS) - BROADCAST_SHIFT
+        broadcast_address = network_address + range_usable + BROADCAST_SHIFT
         
         #calculate usable address range
-        range_min = parse_address_to_str(network_address + 1)
-        range_max = parse_address_to_str(broadcast_address - 1)
+        range_min = parse_address_to_str(network_address + NETWORK_SHIFT)
+        range_max = parse_address_to_str(broadcast_address - BROADCAST_SHIFT)
         
         #put the addresses back in dotted decimal format
         network_address = parse_address_to_str(network_address)
