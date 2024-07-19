@@ -7,17 +7,18 @@ from functions_and_constants import valid_ip
 from functions_and_constants import THIRTY_TWO_BITS
 from functions_and_constants import BROADCAST_SHIFT
 from functions_and_constants import NETWORK_SHIFT
+from functions_and_constants import STAR_AMOUNT
 
 def main():
     #try and except is used for correct input data type
     try:
         
         #get the numerical address from the user
-        ip_address = parse_address_from_str(input("Enter the IP address: "))
-        subnet_mask = parse_address_from_str(input("Enter the subnet mask: "))
+        ip_address = parse_address_from_str(input("Enter the IP address (in dotted decimal form): "))
+        subnet_mask = parse_address_from_str(input("Enter the subnet mask (in dotted decimal form): "))
 
         #input validation
-        if(valid_subnet(subnet_mask) and valid_ip(ip_address)):
+        if(valid_subnet(subnet_mask) or valid_ip(ip_address)):
             print("\nNo usable addresses, the subnet is impossible, or an address is out of range")
             print("Please pick something different\n")
 
@@ -51,12 +52,20 @@ def main():
         print(f"\nNetwork Address: {network_address}")
         print(f"Broadcast Address: {broadcast_address}")
         print(f"Amount of usable addresses: {range_usable}")
-        print(f"Range: {range_min} - {range_max}")
+        print(f"Range: {range_min} - {range_max}\n")
+
+        #ask the user to go again
+        cont = input("Would you like to go again? y for yes, anything else for no: ")
+        if(cont.upper() == "Y"):
+            print("*" * STAR_AMOUNT)
+            main()
     except:
-        print("Unreadable Data, please try again\n")
+        print("\nUnreadable Data, please try again\n")
         main()
 
     #program end
     return
 
 main()
+print("*" * STAR_AMOUNT)
+print("Thank you for using this IP Subnet Calculator program")
