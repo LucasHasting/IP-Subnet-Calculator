@@ -5,6 +5,8 @@ from functions_and_constants import parse_address_to_str
 from functions_and_constants import valid_subnet
 from functions_and_constants import valid_ip
 from functions_and_constants import THIRTY_TWO_BITS
+from functions_and_constants import BROADCAST_SHIFT
+from functions_and_constants import NETWORK_SHIFT
 
 def main():
     #try and except is used for correct input data type
