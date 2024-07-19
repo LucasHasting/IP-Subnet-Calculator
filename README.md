@@ -10,27 +10,25 @@ This program works as a subnet calculator simular to the website [here](https://
 
 ## Installation
 
-This project does not require any external pip packages. You only need Python installed on your system.
+This project does not require any external pip packages. You only need [Python](https://www.python.org/downloads/) installed on your system.
 
-1. Install [Python](https://www.python.org/downloads/)
-
-### Option 1: using git
-2. Clone the repository:
+### Option 1: using [git](https://git-scm.com/downloads)
+1. Clone the repository:
 
     ```sh
     git clone https://github.com/LucasHasting/IP-Subnet-Calculator.git
     ```
 
-3. Navigate to the project directory and execute the program:
+2. Navigate to the project directory and execute the program:
 
     ```sh
     cd IP-Subnet-Calculator
     py subnetting.py
     ```
 ### Option 2: without git
-2. Download the project as a zip file
-3. [Extract the zip file](https://www.wikihow.com/Unzip-a-File)
-4. In windows, the subnetting.py file can be clicked to execute
+1. Download the project as a zip file
+2. [Extract the zip file](https://www.wikihow.com/Unzip-a-File)
+3. In windows, the subnetting.py file can be clicked to execute
 
 #### Run from the command line
 1. Find the location of the files
