@@ -1,4 +1,4 @@
-# IP-Subnet-Calculator
+# IPv4-Subnet-Calculator
 
 This program works as a subnet calculator similar to the website [here](https://www.calculator.net/ip-subnet-calculator.html)
 
