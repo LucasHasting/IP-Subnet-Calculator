@@ -1,6 +1,6 @@
 # IP-Subnet-Calculator
 
-This program works as a subnet calculator simular to the website [here](https://www.calculator.net/ip-subnet-calculator.html)
+This program works as a subnet calculator similar to the website [here](https://www.calculator.net/ip-subnet-calculator.html)
 
 ## Table of Contents
 
