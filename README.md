@@ -46,7 +46,7 @@ The program asks the user to enter an IP address and subnet mask in dotted decim
 
 ## Example
 
-For an example of how to use the program, see the video here (to be posted in the future).
+![EXAMPLE](example.png)
 
 ## Program-Overview
 
