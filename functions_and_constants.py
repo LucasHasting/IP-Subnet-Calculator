@@ -17,7 +17,7 @@ Description:  takes in an IP address in dotted decimal format and converts it
 '''
 def parse_address_from_str(address):
     address = address.split(".")
-    return [int(i) for i in address]
+    return [int(dotted_decimal) for dotted_decimal in address]
 
 '''
 Name:         parse_address_single
@@ -26,8 +26,8 @@ Description:  takes in an IP address in list form and converts it to a single
 '''
 def parse_address_single(address):
     result = NULL
-    for i in range(ADDRESS_POSITIONS):
-        result |= address[LAST_DOTTED_DECIMAL_POSITION-i] << BITS_IN_BYTE*i
+    for address_position in range(ADDRESS_POSITIONS):
+        result |= address[LAST_DOTTED_DECIMAL_POSITION-address_position] << BITS_IN_BYTE*address_position
         
     return result
 
@@ -41,17 +41,17 @@ def parse_address_to_str(address):
     result = [NULL] * ADDRESS_POSITIONS
 
     # put the single integer into list form
-    for i in range(ADDRESS_POSITIONS):
-        value = address >> BITS_IN_BYTE*(LAST_DOTTED_DECIMAL_POSITION-i)
-        result[i] |= value
-        address -= value << BITS_IN_BYTE*(LAST_DOTTED_DECIMAL_POSITION-i)
+    for address_position in range(ADDRESS_POSITIONS):
+        value = address >> BITS_IN_BYTE * (LAST_DOTTED_DECIMAL_POSITION - address_position)
+        result[address_position] |= value
+        address -= value << BITS_IN_BYTE * (LAST_DOTTED_DECIMAL_POSITION - address_position)
 
     # turn the list into dotted decimal form as a string
     to_str = ""
-    for i in result:
-        to_str += str(i) + "."
+    for dotted_decimal in result:
+        to_str += str(dotted_decimal) + "."
 
-    #returns the string except the last character which is an extra dot
+    #returns the address string except the last character which is an extra dot
     return to_str[:len(to_str)-END_OF_STR_SHIFT]
 
 '''
@@ -59,7 +59,7 @@ Name:         valid_subnet
 Description:  takes in a subnet address in list form and validates the address
 '''
 def valid_subnet(subnet):
-    return not all(x in SUBNET_POSSIBILITIES for x in subnet) 
+    return not all(dotted_decimal in SUBNET_POSSIBILITIES for dotted_decimal in subnet) 
     
 
 '''
@@ -67,4 +67,4 @@ Name:         valid_ip
 Description:  takes in a IP address in list form and validates the address
 '''
 def valid_ip(ip):
-    return not all(x < MAX_ADDRESS for x in ip)
+    return not all(dotted_decimal < MAX_ADDRESS for dotted_decimal in ip)
