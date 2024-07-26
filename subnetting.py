@@ -33,7 +33,7 @@ def main():
         ip_address = parse_address_single(ip_address)
         subnet_mask = parse_address_single(subnet_mask)
         
-        #calculate network/broadcast address and total addresses
+        #calculate network address
         network_address = ip_address & subnet_mask
         
         #calculate usable range and broadcast address
