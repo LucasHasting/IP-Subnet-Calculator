@@ -50,4 +50,4 @@ The program asks the user to enter an IP address and subnet mask in dotted decim
 
 ## Program-Overview
 
-The [subnetting.py](https://github.com/LucasHasting/IP-Subnet-Calculator/blob/main/subnetting.py) file contains the main driver of the program and is what needs to be executed, the [functions_and_constants.py](https://github.com/LucasHasting/IP-Subnet-Calculator/blob/main/functions_and_constants.py) file contains the constants used in both programs and the functions used in subnetting.py
+[subnetting.py](https://github.com/LucasHasting/IP-Subnet-Calculator/blob/main/subnetting.py): contains the main driver of the program and is what needs to be executed.   [functions_and_constants.py](https://github.com/LucasHasting/IP-Subnet-Calculator/blob/main/functions_and_constants.py): contains the constants used in both programs and the functions used in subnetting.py
